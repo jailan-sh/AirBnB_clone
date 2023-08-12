@@ -1,5 +1,7 @@
 # Project: 0x00. AirBnB clone - The console
 
+![Airbnb](https://peytonbrsmith.netlify.app/projects/web/airbnb/65f4a1dd9c51265f49d0_hu98d6ceda137062fd4edf4a7d705e7570_76537_700x0_resize_box_3.png)
+
 This project is the first step towards building a full web application: the **AirBnB clone**. 
 
 It is very important because it serves as the back-end base of other projects: 
