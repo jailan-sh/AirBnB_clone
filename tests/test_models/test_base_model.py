@@ -20,6 +20,12 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(datetime, type(BaseModel().created_at))
         self.assertEqual(datetime, type(BaseModel().updated_at))
         self.assertIn(BaseModel(), models.storage.all().values())
+    def test_init(self):
+        """ test init"""
+        bm = BaseModel()
+        self.assertIsNotNone(bm.id)
+        self.assertIsNotNone(bm.created_at)
+        self.assertIsNotNone(bm.updated_at)
     def test_different_values(self):
         """ test different values for different objects"""
         bm_1 = BaseModel()
