@@ -3,14 +3,13 @@
 This is a unittest for base_model.py
 test for instantiation, save & to_dict
 """
-
-import cmd
-from models import storage
 from models.base_model import BaseModel
-from models.amenity import Amenity
-from models.city import City
-from models.place import Place
-from models.review import Review
-from models.state import State
-from models.user import User
 import unittest
+
+class TestBaseModel(unittest.TestCase):
+    """ unittest for BaseModel """
+
+    def test_no_args(self):
+        self.assertEqual(BaseModel, type(BaseModel()))
+if __name__ == '__main__':
+    unittest.main()
