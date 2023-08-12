@@ -7,7 +7,9 @@ This project is the first step towards building a full web application: the **Ai
 It is very important because it serves as the back-end base of other projects: 
 HTML/CSS templating, database storage, API, front-end integration…
 
-**The Console**
+##**The Console**
+
+![console](https://peytonbrsmith.netlify.app/projects/web/airbnb/815046647d23428a14ca_hu68774d5216c48b4f424f088e55e7a2ed_118703_700x0_resize_box_3.png)
 
 This software is a command interpreter similar to a Linux shell but limited to a specific use-case; management of objects in the AirBnB Clone:
 
