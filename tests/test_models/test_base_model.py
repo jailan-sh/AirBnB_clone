@@ -17,6 +17,11 @@ class TestBaseModel(unittest.TestCase):
         """ test no args"""
         self.assertEqual(BaseModel, type(BaseModel()))
 
+    def test_args_unused(self):
+        """ test args """
+        bm = BaseModel(None)
+        self.assertNotIn(None, bm.__dict__.values())
+
     def test_def_value(self):
         """ test values"""
         self.assertEqual(str, type(BaseModel().id))
