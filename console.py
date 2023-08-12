@@ -148,6 +148,13 @@ class HBNBCommand(cmd.Cmd):
                 setattr(obj, obj_attr, attr_value)
             storage.save()
 
+    def defult(self, line):
+        """ to run line """
+        args = line.split(".")
+        if args[0] in self.__cls:
+
+
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
