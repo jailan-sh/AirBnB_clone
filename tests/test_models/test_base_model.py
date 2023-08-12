@@ -13,6 +13,7 @@ class TestBaseModel(unittest.TestCase):
     """ unittest for BaseModel """
 
     def test_no_args(self):
+        """ test no args"""
         self.assertEqual(BaseModel, type(BaseModel()))
     def test_def_value(self):
         """ test values"""
