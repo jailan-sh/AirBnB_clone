@@ -33,5 +33,19 @@ class TestBaseModel(unittest.TestCase):
         bm_3 = BaseModel()
         self.assertEqual(str(bm_3), "[BaseModel] ({}) {}".format(bm_3.id,
                                                                  bm_3.__dict__))
+    def test_save(self):
+        """ test save"""
+        bm_4 = BaseModel()
+        bm_4.save()
+        self.assertIsNotNone(bm_4.updated_at)
+    
+    def test_to_dict(self):
+        """ test to_dict """
+        bm_5 = BaseModel()
+        bm_5_dict = bm_5.to_dict()
+        self.assertIsInstance(bm_5_dict, dict)
+        self.assertIn("__class__", bm_5_dict)
+        self.assertIn("created_at", bm_5_dict)
+        self.assertIn("updated_at", bm_5_dict)
 if __name__ == '__main__':
     unittest.main()
