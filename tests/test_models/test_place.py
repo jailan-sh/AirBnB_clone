@@ -2,3 +2,4 @@
 """
 tests for class Place
 """
+import unittest
