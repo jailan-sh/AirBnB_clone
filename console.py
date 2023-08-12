@@ -148,6 +148,17 @@ class HBNBCommand(cmd.Cmd):
                 setattr(obj, obj_attr, attr_value)
             storage.save()
 
+    def default(self, line):
+        """ to run line """
+        args = line.split(".")
+        if args[0] in self.__cls:
+            if args[1] == "all()":
+                self.do_all(args[0])
+            elif args[1] == "count()":
+                count = [v for k, v in storage.all().items()
+                         if k.startswith(args[0])]
+                print(len(count))
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
