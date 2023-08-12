@@ -158,6 +158,12 @@ class HBNBCommand(cmd.Cmd):
                 count = [v for k, v in storage.all().items()
                          if k.startswith(args[0])]
                 print(len(count))
+            elif args[1].startswith("show"):
+                _id = args[1].split('"')[1]
+                self.do_show(f"{args[0]} {_id}")
+            elif args[1].startswith("destroy"):
+                _id = args[1].split('"')[1]
+                self.do_destroy(f"{args[0]} {_id}")
 
 
 if __name__ == '__main__':
