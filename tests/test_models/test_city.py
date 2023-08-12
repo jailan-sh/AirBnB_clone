@@ -9,6 +9,7 @@ from models.city import City
 class TestCity(unittest.TestCase):
     """ unittest for city """
     def test_no_args(self):
+        """ test no args """
         self.assertEqual(City, type(City()))
     def test_def_value(self):
         """ test values"""
