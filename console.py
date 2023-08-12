@@ -167,12 +167,8 @@ class HBNBCommand(cmd.Cmd):
             elif args[1].startswith("update"):
                 _id = args[1].split('"')[1]
                 _attr = args[1].split('"')[3]
-                if type(_attr) != dict:
-                    _value = args[1].split('"')[5]
-                    self.do_update(f"{args[0]} {_id} {_attr} {_value}")
-                else:
-                    for k in _attr.items():
-                        self.do_update(f"{args[0]} {_id} {k} {v}")
+                _value = args[1].split('"')[5]
+                self.do_update(f"{args[0]} {_id} {_attr} {_value}")
 
 
 if __name__ == '__main__':
