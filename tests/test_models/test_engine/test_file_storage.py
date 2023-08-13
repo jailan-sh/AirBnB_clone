@@ -11,7 +11,7 @@ from models.city import City
 from models.amenity import Amenity
 from models.review import Review
 from models.base_model import BaseModel
-
+from models import storage
 
 class TestFileStorage(unittest.TestCase):
     """ unittest for FileStorage """
@@ -23,3 +23,8 @@ class TestFileStorage(unittest.TestCase):
         """ test values"""
         self.assertEqual(FileStorage._FileStorage__file_path, "file.json")
         self.assertEqual(type(FileStorage._FileStorage__objects), dict)
+
+    def test_all(self):
+        """ test all"""
+        f_obj = FileStorage._FileStorage__objects
+        self.assertEqual(storage.all(), f_obj)
