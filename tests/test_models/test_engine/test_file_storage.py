@@ -12,11 +12,13 @@ from models.amenity import Amenity
 from models.review import Review
 from models.base_model import BaseModel
 
+
 class TestFileStorage(unittest.TestCase):
     """ unittest for FileStorage """
     def test_no_args(self):
         """ test no args """
         self.assertEqual(FileStorage, type(FileStorage()))
+
     def test_def_value(self):
         """ test values"""
         self.assertEqual(FileStorage._FileStorage__file_path, "file.json")
