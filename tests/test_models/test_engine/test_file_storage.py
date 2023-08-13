@@ -67,3 +67,18 @@ class TestFileStorage(unittest.TestCase):
         self.storage.reload()
         key = "{}.{}".format(obj.__class__.__name__, obj.id)
         self.assertIn(key, self.storage.all().keys())
+
+    def test_basemodel(self):
+        """ Test with basemodel object """
+        b = BaseModel()
+        name = b.__class__.__name__ + '.' + b.id
+        dic = {name: b}
+        self.assertEqual(storage.all(), dic)
+
+    def test_extra_arg(self):
+        """ Test no argument """
+        b = BaseModel()
+        with self.assertRaises(TypeError):
+            storage.new(b, b)
+
+
