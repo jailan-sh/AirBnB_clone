@@ -43,6 +43,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsNotNone(bm.id)
         self.assertIsNotNone(bm.created_at)
         self.assertIsNotNone(bm.updated_at)
+        self.assertIn(BaseModel(), models.storage.all().values())
 
     def test_different_values(self):
         """ test different values for different objects"""
