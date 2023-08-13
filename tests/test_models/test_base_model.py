@@ -22,6 +22,14 @@ class TestBaseModel(unittest.TestCase):
         bm = BaseModel(None)
         self.assertNotIn(None, bm.__dict__.values())
 
+    def test_kwargs_unused(self):
+        """ test kwargs """
+        dt = datetime.fromisoformat(datetime.now().isoformat())
+        bm_7 = BaseModel(id = "1234", created_at = str(dt), updated_at = str(dt))
+        self.assertEqual(bm_7.id , "1234")
+        self.assertEqual(bm_7.created_at, dt)
+        self.assertEqual(bm_7.updated_at, dt)
+
     def test_def_value(self):
         """ test values"""
         self.assertEqual(str, type(BaseModel().id))
