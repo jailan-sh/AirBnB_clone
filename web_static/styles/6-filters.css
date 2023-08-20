@@ -46,3 +46,27 @@ h4 {
     font-size: 14px;
     text-align: center;
 }
+.popover {
+    
+    background-color: #FAFAFA;
+    width: auto;
+    border-radius: 4px;
+    border: 1px solid #DDDDDD;
+    margin-top: -18px;
+}
+ 
+ div:hover > .popover {
+    display: block;
+    cursor: pointer;
+}
+h2 {
+    font-size: 16px;
+}
+ul {
+    padding: 0.5em 0 1em 1em;
+}
+li {
+    margin: 5px 0 0 20px;
+    list-style: none;
+}
+
