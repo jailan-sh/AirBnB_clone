@@ -63,9 +63,10 @@ h2 {
     font-size: 16px;
 }
 ul {
+    margin-top: 5px;
     padding: 0.5em 0 1em 1em;
 }
 li {
-    margin: 5px 0 0 20px;
+    margin-top: 5px;
     list-style: none;
 }
