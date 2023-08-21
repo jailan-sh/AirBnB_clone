@@ -52,7 +52,9 @@ article h2 {
     text-align: center;
     background-repeat: no-repeat;
 }
-
+.max_guest span, .number_rooms span, .number_bathrooms span {
+    margin-top: -50%;
+}
 .max_guest {
     background-image: url(../images/icon_group.png);
 
