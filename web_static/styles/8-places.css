@@ -48,12 +48,14 @@ article h2 {
 }
 .max_guest, .number_rooms, .number_bathrooms {
     width: 100px;
-    margin: 0 15px 0;
+    margin: 0 20px 0 30px;
     text-align: center;
     background-repeat: no-repeat;
+    line-height: 4em;
 }
-.max_guest span, .number_rooms span, .number_bathrooms span {
-    margin-top: -50%;
+
+.information span {
+    font-size: 20px;
 }
 .max_guest {
     background-image: url(../images/icon_group.png);
@@ -65,4 +67,15 @@ article h2 {
 .number_bathrooms {
     background-image: url(../images/icon_bath.png);
     
+}
+ .user b {
+    margin-bottom: 50px;
+    font-size: 28px;
+ }
+ .user {
+font-size: 27px;
+ }
+
+.description p {
+font-size: 20px;
 }
